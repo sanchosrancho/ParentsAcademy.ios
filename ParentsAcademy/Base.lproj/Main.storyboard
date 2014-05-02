@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDC-56-pjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-91" y="848"/>
+            <point key="canvasLocation" x="503" y="860"/>
         </scene>
         <!--Baby Date Birth View Controller - День рождения малыша-->
         <scene sceneID="qjy-Lz-QHg">
@@ -123,6 +123,41 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6w-pA-d2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1271" y="322"/>
+        </scene>
+        <!--Video Page View Controller-->
+        <scene sceneID="qmS-CO-Zd2">
+            <objects>
+                <viewController storyboardIdentifier="VideoPageViewController" id="vEh-F2-en5" customClass="VideoPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CHe-DY-Akv"/>
+                        <viewControllerLayoutGuide type="bottom" id="J6m-OT-NTU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fNn-1X-k6p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEa-YN-wXK">
+                                <rect key="frame" x="0.0" y="65" width="320" height="150"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a77-j5-QSd">
+                                <rect key="frame" x="0.0" y="215" width="320" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="contentScrollView" destination="a77-j5-QSd" id="fun-y2-Uid"/>
+                        <outlet property="videoContainerView" destination="HEa-YN-wXK" id="UIg-TW-WIL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V57-EE-ifO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043" y="978"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fwi-sO-aIC">

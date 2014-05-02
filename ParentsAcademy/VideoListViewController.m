@@ -10,6 +10,7 @@
 #import "YouTubeLoader.h"
 #import "DatabaseManager.h"
 #import "Settings.h"
+#import "VideoPageViewController.h"
 
 @interface VideoListViewController () <NSFetchedResultsControllerDelegate> {
     NSArray *tableData;
@@ -147,13 +148,19 @@
 //    NSString *videoId = [[tableData objectAtIndex:indexPath.row] objectForKey:@"video_id"];
     YouTubeItem *youtubeVideo = [[DatabaseManager sharedInstance].youtubeItemsFetchedController objectAtIndexPath:indexPath];
     
-    UIGraphicsBeginImageContext(CGSizeMake(1,1));
-    self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youtubeVideo.videoId];
+//    UIGraphicsBeginImageContext(CGSizeMake(1,1));
+//    self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youtubeVideo.videoId];
+//    
+//    [self presentMoviePlayerViewControllerAnimated:self.videoPlayerViewController];
+//    [self.videoPlayerViewController.moviePlayer play];
+//
+//    UIGraphicsEndImageContext();
+
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    VideoPageViewController *videoPage = [storyboard instantiateViewControllerWithIdentifier:@"VideoPageViewController"];
+    videoPage.videoItem = youtubeVideo;
     
-    [self presentMoviePlayerViewControllerAnimated:self.videoPlayerViewController];
-    [self.videoPlayerViewController.moviePlayer play];
-    
-    UIGraphicsEndImageContext();
+    [self.navigationController pushViewController:videoPage animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout  *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

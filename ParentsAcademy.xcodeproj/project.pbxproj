@@ -32,6 +32,7 @@
 		DFD37A841913B96900D1ECE2 /* YouTubeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A831913B96900D1ECE2 /* YouTubeItem.m */; };
 		DFD37A881913BACE00D1ECE2 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A871913BACE00D1ECE2 /* DatabaseManager.m */; };
 		DFD37A8A1913CCDE00D1ECE2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD37A891913CCDE00D1ECE2 /* MediaPlayer.framework */; };
+		DFD37A8D191451D500D1ECE2 /* VideoPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A8C191451D500D1ECE2 /* VideoPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		DFD37A861913BACE00D1ECE2 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		DFD37A871913BACE00D1ECE2 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		DFD37A891913CCDE00D1ECE2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		DFD37A8B191451D500D1ECE2 /* VideoPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPageViewController.h; sourceTree = "<group>"; };
+		DFD37A8C191451D500D1ECE2 /* VideoPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,8 @@
 			children = (
 				DFD37A761913AE2000D1ECE2 /* VideoListViewController.h */,
 				DFD37A771913AE2000D1ECE2 /* VideoListViewController.m */,
+				DFD37A8B191451D500D1ECE2 /* VideoPageViewController.h */,
+				DFD37A8C191451D500D1ECE2 /* VideoPageViewController.m */,
 			);
 			name = Video;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				DFD37A7E1913B16C00D1ECE2 /* Model.xcdatamodeld in Sources */,
 				DFD37A781913AE2000D1ECE2 /* VideoListViewController.m in Sources */,
 				DFB7451B1912C587003806F9 /* AppDelegate.m in Sources */,
+				DFD37A8D191451D500D1ECE2 /* VideoPageViewController.m in Sources */,
 				DFD37A751913ABF900D1ECE2 /* YouTubeLoader.m in Sources */,
 				DFD37A881913BACE00D1ECE2 /* DatabaseManager.m in Sources */,
 				DFD37A841913B96900D1ECE2 /* YouTubeItem.m in Sources */,
