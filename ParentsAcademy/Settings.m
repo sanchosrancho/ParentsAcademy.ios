@@ -20,6 +20,8 @@
     return sharedInstance;
 }
 
+#warning Birth date doesn't save correctly
+
 - (void)setBabyBirthDate:(NSDate *)babyBirthDate
 {
     [self _set:@"BabyBirth" value:babyBirthDate];
@@ -32,6 +34,8 @@
 
 #pragma mark - Helpers
 
+#warning Remove debug logs
+
 - (id)_get:(NSString *)key {
     NSUserDefaults *userDefs = [NSUserDefaults standardUserDefaults];
     NSLog(@"%@", [userDefs dictionaryRepresentation]);
@@ -41,7 +45,6 @@
 - (void)_set:(NSString *)key value:(id)value {
     NSUserDefaults *userDefs = [NSUserDefaults standardUserDefaults];
     [userDefs setObject:value forKey:key];
-    
     NSLog(@"%@", [userDefs dictionaryRepresentation]);
 }
 

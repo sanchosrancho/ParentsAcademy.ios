@@ -31,7 +31,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSDate *babyBirthDate = [Settings sharedInstance].babyBirthDate;
+    NSDate *babyBirthDate = (NSDate *)[Settings sharedInstance].babyBirthDate;
     if (babyBirthDate) {
         [self.birthDatePicker setDate: babyBirthDate ];
     }
