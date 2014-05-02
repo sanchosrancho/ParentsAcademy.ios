@@ -30,6 +30,7 @@
 		DFD37A7E1913B16C00D1ECE2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A7C1913B16C00D1ECE2 /* Model.xcdatamodeld */; };
 		DFD37A811913B96800D1ECE2 /* YouTubePlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A801913B96800D1ECE2 /* YouTubePlaylist.m */; };
 		DFD37A841913B96900D1ECE2 /* YouTubeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A831913B96900D1ECE2 /* YouTubeItem.m */; };
+		DFD37A881913BACE00D1ECE2 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A871913BACE00D1ECE2 /* DatabaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		DFD37A801913B96800D1ECE2 /* YouTubePlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubePlaylist.m; sourceTree = "<group>"; };
 		DFD37A821913B96900D1ECE2 /* YouTubeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeItem.h; sourceTree = "<group>"; };
 		DFD37A831913B96900D1ECE2 /* YouTubeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeItem.m; sourceTree = "<group>"; };
+		DFD37A861913BACE00D1ECE2 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		DFD37A871913BACE00D1ECE2 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +257,8 @@
 				DFD37A831913B96900D1ECE2 /* YouTubeItem.m */,
 				DFD37A7F1913B96800D1ECE2 /* YouTubePlaylist.h */,
 				DFD37A801913B96800D1ECE2 /* YouTubePlaylist.m */,
+				DFD37A861913BACE00D1ECE2 /* DatabaseManager.h */,
+				DFD37A871913BACE00D1ECE2 /* DatabaseManager.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -399,6 +404,7 @@
 				DFD37A781913AE2000D1ECE2 /* VideoListViewController.m in Sources */,
 				DFB7451B1912C587003806F9 /* AppDelegate.m in Sources */,
 				DFD37A751913ABF900D1ECE2 /* YouTubeLoader.m in Sources */,
+				DFD37A881913BACE00D1ECE2 /* DatabaseManager.m in Sources */,
 				DFD37A841913B96900D1ECE2 /* YouTubeItem.m in Sources */,
 				DFB745171912C587003806F9 /* main.m in Sources */,
 			);
