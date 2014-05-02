@@ -22,6 +22,7 @@
 		DFB745341912C588003806F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFB745321912C588003806F9 /* InfoPlist.strings */; };
 		DFB745361912C588003806F9 /* ParentsAcademyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB745351912C588003806F9 /* ParentsAcademyTests.m */; };
 		DFB7454619138C96003806F9 /* BabyDateBirthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7454519138C96003806F9 /* BabyDateBirthViewController.m */; };
+		DFB7454B19138DF4003806F9 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7454A19138DF4003806F9 /* Settings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		DFB745351912C588003806F9 /* ParentsAcademyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParentsAcademyTests.m; sourceTree = "<group>"; };
 		DFB7454419138C96003806F9 /* BabyDateBirthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyDateBirthViewController.h; sourceTree = "<group>"; };
 		DFB7454519138C96003806F9 /* BabyDateBirthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyDateBirthViewController.m; sourceTree = "<group>"; };
+		DFB7454919138DF4003806F9 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		DFB7454A19138DF4003806F9 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,7 @@
 		DFB7454119138C48003806F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DFB7454719138D57003806F9 /* Settings */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -195,6 +199,15 @@
 			children = (
 			);
 			name = Video;
+			sourceTree = "<group>";
+		};
+		DFB7454719138D57003806F9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DFB7454919138DF4003806F9 /* Settings.h */,
+				DFB7454A19138DF4003806F9 /* Settings.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +309,7 @@
 			files = (
 				DFB7454619138C96003806F9 /* BabyDateBirthViewController.m in Sources */,
 				DFB745211912C588003806F9 /* ViewController.m in Sources */,
+				DFB7454B19138DF4003806F9 /* Settings.m in Sources */,
 				DFB7451B1912C587003806F9 /* AppDelegate.m in Sources */,
 				DFB745171912C587003806F9 /* main.m in Sources */,
 			);

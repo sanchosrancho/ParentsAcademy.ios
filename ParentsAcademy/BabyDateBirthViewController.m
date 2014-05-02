@@ -29,6 +29,14 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSDate *babyBirthDate = [Settings sharedInstance].babyBirthDate;
+    if (babyBirthDate) {
+        [self.birthDatePicker setDate: babyBirthDate ];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -45,5 +53,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)birthDateChanged:(id)sender {
+    if (NO == [sender isKindOfClass:[UIDatePicker class]]) return;
+    
+    UIDatePicker *datePicker = (UIDatePicker *)sender;
+    [[Settings sharedInstance] setBabyBirthDate: datePicker.date ];
+}
 
 @end

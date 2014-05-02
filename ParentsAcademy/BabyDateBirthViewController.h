@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Settings.h"
 
-@interface BabyDateBirthViewController : UIViewController
+@interface BabyDateBirthViewController : UIViewController 
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *birthDatePicker;
+
+- (IBAction)birthDateChanged:(id)sender;
 
 @end
