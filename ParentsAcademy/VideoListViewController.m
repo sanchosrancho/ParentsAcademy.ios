@@ -123,6 +123,20 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    NSString *videoId = [[tableData objectAtIndex:indexPath.row] objectForKey:@"video_id"];
+    YouTubeItem *youtubeVideo = [[DatabaseManager sharedInstance].youtubeItemsFetchedController objectAtIndexPath:indexPath];
+    
+    UIGraphicsBeginImageContext(CGSizeMake(1,1));
+    self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youtubeVideo.videoId];
+    
+    [self presentMoviePlayerViewControllerAnimated:self.videoPlayerViewController];
+    [self.videoPlayerViewController.moviePlayer play];
+    
+    UIGraphicsEndImageContext();
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout  *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(192.f, 192.f);

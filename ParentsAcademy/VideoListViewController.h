@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <XCDYouTubeVideoPlayerViewController.h>
 
 @interface VideoListViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) UICollectionView *collectionView;
+@property (nonatomic, strong) XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
 
 @end

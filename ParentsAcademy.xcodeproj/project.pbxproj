@@ -31,6 +31,7 @@
 		DFD37A811913B96800D1ECE2 /* YouTubePlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A801913B96800D1ECE2 /* YouTubePlaylist.m */; };
 		DFD37A841913B96900D1ECE2 /* YouTubeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A831913B96900D1ECE2 /* YouTubeItem.m */; };
 		DFD37A881913BACE00D1ECE2 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A871913BACE00D1ECE2 /* DatabaseManager.m */; };
+		DFD37A8A1913CCDE00D1ECE2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD37A891913CCDE00D1ECE2 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		DFD37A831913B96900D1ECE2 /* YouTubeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeItem.m; sourceTree = "<group>"; };
 		DFD37A861913BACE00D1ECE2 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
 		DFD37A871913BACE00D1ECE2 /* DatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
+		DFD37A891913CCDE00D1ECE2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD37A8A1913CCDE00D1ECE2 /* MediaPlayer.framework in Frameworks */,
 				DFB7450D1912C587003806F9 /* CoreGraphics.framework in Frameworks */,
 				DFB7450F1912C587003806F9 /* UIKit.framework in Frameworks */,
 				DFB7450B1912C587003806F9 /* Foundation.framework in Frameworks */,
@@ -132,6 +135,7 @@
 		DFB745091912C587003806F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFD37A891913CCDE00D1ECE2 /* MediaPlayer.framework */,
 				DFB7450A1912C587003806F9 /* Foundation.framework */,
 				DFB7450C1912C587003806F9 /* CoreGraphics.framework */,
 				DFB7450E1912C587003806F9 /* UIKit.framework */,
