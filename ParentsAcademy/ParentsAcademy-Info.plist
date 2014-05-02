@@ -2,16 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>YouTube playlists for baby age</key>
+	<key>Settings for baby age</key>
 	<dict>
 		<key>BabyAgeNotYetBorn</key>
-		<string>PLJJFdo3ZDFBEcQUQi7ctr1iC6dPjWoxqz</string>
+		<dict>
+			<key>playlist</key>
+			<string>PLJJFdo3ZDFBEcQUQi7ctr1iC6dPjWoxqz</string>
+			<key>title</key>
+			<string>Ждём малыша</string>
+		</dict>
 		<key>BabyAgeUnder1Year</key>
-		<string>PLJJFdo3ZDFBGCLFB4T57RDleLmvFaudF8</string>
+		<dict>
+			<key>playlist</key>
+			<string>PLJJFdo3ZDFBGCLFB4T57RDleLmvFaudF8</string>
+			<key>title</key>
+			<string>от 0 до 12 месяцев</string>
+		</dict>
 		<key>BabyAgeUnder2Years</key>
-		<string>PLJJFdo3ZDFBEMUkGQHRdzqPkyd0ODnCV2</string>
+		<dict>
+			<key>playlist</key>
+			<string>PLJJFdo3ZDFBEMUkGQHRdzqPkyd0ODnCV2</string>
+			<key>title</key>
+			<string>от 1 года до 2 лет</string>
+		</dict>
 		<key>BabyAgeUnder3Years</key>
-		<string>PLJJFdo3ZDFBHd1CJ8cySn0nY5B23k9V_e</string>
+		<dict>
+			<key>playlist</key>
+			<string>PLJJFdo3ZDFBHd1CJ8cySn0nY5B23k9V_e</string>
+			<key>title</key>
+			<string>от 2 до 3 лет</string>
+		</dict>
 	</dict>
 	<key>YouTube API Key</key>
 	<string>AIzaSyAKT4_FxIFm6JzHVhNqKmzWTa-CB5c29k8</string>

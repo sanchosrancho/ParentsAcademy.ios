@@ -71,6 +71,8 @@
     Settings *settings = [Settings sharedInstance];
     NSString *playlistId = [settings youtubePlaylistIdForBabyAge: settings.babyAge ];
     [[YouTubeLoader sharedInstance] showOnlyOnePlaylist: playlistId ];
+    
+    self.navigationItem.title = [settings pageTitleForBabyAge: settings.babyAge ];
 }
 
 /*

@@ -52,11 +52,21 @@
     return BabyAgeUnder3Years;
 }
 
-- (NSString *)youtubePlaylistIdForBabyAge:(BabyAge)age
+- (NSDictionary *)settingForBabyAge:(BabyAge)age
 {
-    NSDictionary *playlists = (NSDictionary *)[[NSBundle mainBundle] objectForInfoDictionaryKey:@"YouTube playlists for baby age"];
+    NSDictionary *playlists = (NSDictionary *)[[NSBundle mainBundle] objectForInfoDictionaryKey:@"Settings for baby age"];
     NSString *babyAgeKey = BabyAgeString(age);
     return [playlists objectForKey:babyAgeKey];
+}
+
+- (NSString *)youtubePlaylistIdForBabyAge:(BabyAge)age
+{
+    return [[self settingForBabyAge:age]  objectForKey:@"playlist"];
+}
+
+- (NSString *)pageTitleForBabyAge:(BabyAge)age
+{
+    return [[self settingForBabyAge:age]  objectForKey:@"title"];
 }
 
 #pragma mark - Helpers

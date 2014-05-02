@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Месяц беременности-->
         <scene sceneID="3y5-vv-bMv">
             <objects>
                 <viewController id="uEn-9d-M4t" sceneMemberID="viewController">
@@ -16,21 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="На каком вы месяце?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk0-wG-p8i">
-                                <rect key="frame" x="20" y="88" width="280" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-Bp-kKV">
-                                <rect key="frame" x="0.0" y="196" width="320" height="162"/>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-Bp-kKV">
+                                <rect key="frame" x="0.0" y="71" width="320" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="MgF-Bp-kKV" secondAttribute="centerX" id="Y6R-KX-gE8"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VxE-eB-3pe"/>
+                    <navigationItem key="navigationItem" title="Месяц беременности" id="VxE-eB-3pe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="nhH-Jq-ssE"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ym-if-CWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="-91" y="848"/>
         </scene>
-        <!--Baby Date Birth View Controller-->
+        <!--Baby Date Birth View Controller - День рождения малыша-->
         <scene sceneID="qjy-Lz-QHg">
             <objects>
                 <viewController id="dWa-P4-kM7" customClass="BabyDateBirthViewController" sceneMemberID="viewController">
@@ -67,14 +65,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="День рождения вашего малыша" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT2-zu-ApF">
-                                <rect key="frame" x="20" y="98" width="280" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EXH-5d-Rv8">
-                                <rect key="frame" x="0.0" y="159" width="320" height="162"/>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EXH-5d-Rv8">
+                                <rect key="frame" x="0.0" y="64" width="320" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="420662770.41906101">
                                     <!--2014-05-01 18:46:10 +0000-->
@@ -113,8 +105,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="EXH-5d-Rv8" secondAttribute="centerX" id="ZhB-yM-qp3"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="scu-8V-P3P">
+                    <navigationItem key="navigationItem" title="День рождения малыша" id="scu-8V-P3P">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="303-A0-MKg">
                             <connections>
                                 <segue destination="v3I-md-maD" kind="push" id="nWF-ia-UOI"/>
@@ -141,8 +136,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTK-Bh-Ake">
-                                <rect key="frame" x="72" y="88" width="176" height="162"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTK-Bh-Ake">
+                                <rect key="frame" x="72" y="92" width="176" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.20577781219999999" blue="0.2868450655" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Pregnant">
@@ -152,7 +147,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <segue destination="uEn-9d-M4t" kind="push" id="8Om-yL-TMv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zf-dm-oij">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zf-dm-oij">
                                 <rect key="frame" x="72" y="285" width="176" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.20577781219999999" blue="0.2868450655" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,6 +160,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="UTK-Bh-Ake" secondAttribute="centerX" id="6d6-IL-MNP"/>
+                            <constraint firstAttribute="centerX" secondItem="1zf-dm-oij" secondAttribute="centerX" id="nSi-4o-wpq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uld-JE-65z"/>
                 </viewController>

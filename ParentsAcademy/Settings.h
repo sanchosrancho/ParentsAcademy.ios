@@ -24,5 +24,6 @@ typedef enum {
 
 + (instancetype)sharedInstance;
 - (NSString *)youtubePlaylistIdForBabyAge:(BabyAge)age;
+- (NSString *)pageTitleForBabyAge:(BabyAge)age;
 
 @end
