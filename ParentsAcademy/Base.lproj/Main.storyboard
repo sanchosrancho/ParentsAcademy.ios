@@ -61,62 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDC-56-pjW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="332"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Ncq-U3-Pgm">
-            <objects>
-                <viewController id="HwV-6l-8n2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Wz-Sj-ZFd"/>
-                        <viewControllerLayoutGuide type="bottom" id="NY2-sm-JY4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h5w-Gc-xMb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Q87-KN-RY4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jaC-Wz-w0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="470" y="1990"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="kl5-za-UaY">
-            <objects>
-                <viewController id="owH-50-aRd" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="awI-oT-aux"/>
-                        <viewControllerLayoutGuide type="bottom" id="byO-Ow-F8X"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UCy-r2-dx0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m3Q-hu-x3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1102" y="1982"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1nR-Vv-pkt">
-            <objects>
-                <viewController id="biV-W6-cZG" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aZO-8m-ia0"/>
-                        <viewControllerLayoutGuide type="bottom" id="B9v-Tg-Cxe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2By-Dm-idZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iua-Rt-Ahb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1822" y="1966"/>
+            <point key="canvasLocation" x="-91" y="848"/>
         </scene>
         <!--Baby Date Birth View Controller-->
         <scene sceneID="qjy-Lz-QHg">
@@ -150,7 +95,7 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="ru"/>
                                 <timeZone key="timeZone" name="America/Los_Angeles">
-                                    <mutableData key="data">
+                                    <data key="data">
 VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
 y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
 5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
@@ -168,7 +113,7 @@ f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
-</mutableData>
+</data>
                                 </timeZone>
                                 <connections>
                                     <action selector="birthDateChanged:" destination="dWa-P4-kM7" eventType="valueChanged" id="TnP-ai-2ec"/>
@@ -240,6 +185,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <navigationController definesPresentationContext="YES" id="yDU-IT-kDE" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KJl-SO-hxT">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="YouTubeItem" representedClassName="YouTubeItem" syncable="YES">
+        <attribute name="itemDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publishedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="thumbnailCache" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailDefault" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailHigh" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailMedium" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="playlist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="YouTubePlaylist" inverseName="items" inverseEntity="YouTubePlaylist" syncable="YES"/>
+    </entity>
+    <entity name="YouTubePlaylist" representedClassName="YouTubePlaylist" syncable="YES">
+        <attribute name="hidden" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="playlistDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playlistId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="YouTubeItem" inverseName="playlist" inverseEntity="YouTubeItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="YouTubePlaylist" positionX="-324" positionY="53" width="128" height="118"/>
+        <element name="YouTubeItem" positionX="-54" positionY="18" width="128" height="193"/>
+    </elements>
+</model>

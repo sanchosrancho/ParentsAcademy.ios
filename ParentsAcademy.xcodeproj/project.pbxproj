@@ -25,6 +25,11 @@
 		DFB7454619138C96003806F9 /* BabyDateBirthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7454519138C96003806F9 /* BabyDateBirthViewController.m */; };
 		DFB7454B19138DF4003806F9 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7454A19138DF4003806F9 /* Settings.m */; };
 		DFD37A711913A94D00D1ECE2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DFD37A701913A94D00D1ECE2 /* README.md */; };
+		DFD37A751913ABF900D1ECE2 /* YouTubeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A741913ABF900D1ECE2 /* YouTubeLoader.m */; };
+		DFD37A781913AE2000D1ECE2 /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A771913AE2000D1ECE2 /* VideoListViewController.m */; };
+		DFD37A7E1913B16C00D1ECE2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A7C1913B16C00D1ECE2 /* Model.xcdatamodeld */; };
+		DFD37A811913B96800D1ECE2 /* YouTubePlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A801913B96800D1ECE2 /* YouTubePlaylist.m */; };
+		DFD37A841913B96900D1ECE2 /* YouTubeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A831913B96900D1ECE2 /* YouTubeItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,15 @@
 		DFB7454919138DF4003806F9 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		DFB7454A19138DF4003806F9 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		DFD37A701913A94D00D1ECE2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DFD37A731913ABF900D1ECE2 /* YouTubeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeLoader.h; sourceTree = "<group>"; };
+		DFD37A741913ABF900D1ECE2 /* YouTubeLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeLoader.m; sourceTree = "<group>"; };
+		DFD37A761913AE2000D1ECE2 /* VideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListViewController.h; sourceTree = "<group>"; };
+		DFD37A771913AE2000D1ECE2 /* VideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListViewController.m; sourceTree = "<group>"; };
+		DFD37A7D1913B16C00D1ECE2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DFD37A7F1913B96800D1ECE2 /* YouTubePlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubePlaylist.h; sourceTree = "<group>"; };
+		DFD37A801913B96800D1ECE2 /* YouTubePlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubePlaylist.m; sourceTree = "<group>"; };
+		DFD37A821913B96900D1ECE2 /* YouTubeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeItem.h; sourceTree = "<group>"; };
+		DFD37A831913B96900D1ECE2 /* YouTubeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +203,8 @@
 		DFB7454119138C48003806F9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DFD37A851913B9B000D1ECE2 /* CoreData */,
+				DFD37A721913ABD500D1ECE2 /* Video */,
 				DFB7454719138D57003806F9 /* Settings */,
 			);
 			name = Models;
@@ -206,6 +222,8 @@
 		DFB7454319138C65003806F9 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				DFD37A761913AE2000D1ECE2 /* VideoListViewController.h */,
+				DFD37A771913AE2000D1ECE2 /* VideoListViewController.m */,
 			);
 			name = Video;
 			sourceTree = "<group>";
@@ -217,6 +235,27 @@
 				DFB7454A19138DF4003806F9 /* Settings.m */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		DFD37A721913ABD500D1ECE2 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				DFD37A731913ABF900D1ECE2 /* YouTubeLoader.h */,
+				DFD37A741913ABF900D1ECE2 /* YouTubeLoader.m */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		DFD37A851913B9B000D1ECE2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DFD37A7C1913B16C00D1ECE2 /* Model.xcdatamodeld */,
+				DFD37A821913B96900D1ECE2 /* YouTubeItem.h */,
+				DFD37A831913B96900D1ECE2 /* YouTubeItem.m */,
+				DFD37A7F1913B96800D1ECE2 /* YouTubePlaylist.h */,
+				DFD37A801913B96800D1ECE2 /* YouTubePlaylist.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,7 +394,12 @@
 				DFB7454619138C96003806F9 /* BabyDateBirthViewController.m in Sources */,
 				DFB745211912C588003806F9 /* ViewController.m in Sources */,
 				DFB7454B19138DF4003806F9 /* Settings.m in Sources */,
+				DFD37A811913B96800D1ECE2 /* YouTubePlaylist.m in Sources */,
+				DFD37A7E1913B16C00D1ECE2 /* Model.xcdatamodeld in Sources */,
+				DFD37A781913AE2000D1ECE2 /* VideoListViewController.m in Sources */,
 				DFB7451B1912C587003806F9 /* AppDelegate.m in Sources */,
+				DFD37A751913ABF900D1ECE2 /* YouTubeLoader.m in Sources */,
+				DFD37A841913B96900D1ECE2 /* YouTubeItem.m in Sources */,
 				DFB745171912C587003806F9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +619,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DFD37A7C1913B16C00D1ECE2 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DFD37A7D1913B16C00D1ECE2 /* Model.xcdatamodel */,
+			);
+			currentVersion = DFD37A7D1913B16C00D1ECE2 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DFB744FF1912C587003806F9 /* Project object */;
 }
