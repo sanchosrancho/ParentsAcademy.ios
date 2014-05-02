@@ -9,6 +9,7 @@
 #import "VideoListViewController.h"
 #import "YouTubeLoader.h"
 #import "DatabaseManager.h"
+#import "Settings.h"
 
 @interface VideoListViewController () <NSFetchedResultsControllerDelegate> {
     NSArray *tableData;
@@ -53,8 +54,7 @@
 
     [self.view addSubview:self.collectionView];
     
-    
-    [[YouTubeLoader sharedInstance] loadPlaylistsForChannel:@"UCXfLC9ybl3aIUZpuoA_gRDA"];
+//    [[YouTubeLoader sharedInstance] loadPlaylistsForChannel:@"UCXfLC9ybl3aIUZpuoA_gRDA"];
     [DatabaseManager addListenerForYotubeItemsFetchedResultsController:self];
 }
 
@@ -62,6 +62,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    Settings *settings = [Settings sharedInstance];
+    NSString *playlistId = [settings youtubePlaylistIdForBabyAge: settings.babyAge ];
+    [[YouTubeLoader sharedInstance] showOnlyOnePlaylist: playlistId ];
 }
 
 /*

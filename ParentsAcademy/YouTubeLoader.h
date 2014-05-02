@@ -20,4 +20,6 @@
 + (void)downloadThumbnail:(NSString *)imageURL andSaveForItem:(NSManagedObjectID *)objectId;
 + (NSString *)fullPathForFile:(NSString *)filename;
 
+- (void)showOnlyOnePlaylist:(NSString *)playlistId;
+
 @end

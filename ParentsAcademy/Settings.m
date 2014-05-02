@@ -32,6 +32,33 @@
     return [self _get:@"BabyBirth"];
 }
 
+- (BabyAge)babyAge
+{
+    if (!self.babyBirthDate) {
+        return BabyAgeNotYetBorn;
+    }
+    
+    NSDateComponents* ageComponents = [[NSCalendar currentCalendar] 
+        components:NSYearCalendarUnit
+        fromDate:self.babyBirthDate
+        toDate:[NSDate date]
+        options:0];
+    
+    switch ([ageComponents year]) {
+        case 0: return BabyAgeUnder1Year;
+        case 1: return BabyAgeUnder2Years;
+        case 2: return BabyAgeUnder3Years;
+    }
+    return BabyAgeUnder3Years;
+}
+
+- (NSString *)youtubePlaylistIdForBabyAge:(BabyAge)age
+{
+    NSDictionary *playlists = (NSDictionary *)[[NSBundle mainBundle] objectForInfoDictionaryKey:@"YouTube playlists for baby age"];
+    NSString *babyAgeKey = BabyAgeString(age);
+    return [playlists objectForKey:babyAgeKey];
+}
+
 #pragma mark - Helpers
 
 #warning Remove debug logs

@@ -8,10 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    BabyAgeNotYetBorn,
+    BabyAgeUnder1Year,
+    BabyAgeUnder2Years,
+    BabyAgeUnder3Years
+} BabyAge;
+#define BabyAgeString(enum) [@[@"BabyAgeNotYetBorn",@"BabyAgeUnder1Year",@"BabyAgeUnder2Years",@"BabyAgeUnder3Years"] objectAtIndex:enum]
+
+
 @interface Settings : NSObject
 
 @property (nonatomic, strong) NSDate *babyBirthDate;
+@property (nonatomic, readonly) BabyAge babyAge;
 
 + (instancetype)sharedInstance;
+- (NSString *)youtubePlaylistIdForBabyAge:(BabyAge)age;
 
 @end

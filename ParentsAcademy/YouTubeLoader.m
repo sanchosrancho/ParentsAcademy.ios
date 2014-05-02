@@ -120,7 +120,9 @@
     youtubePlaylist.playlistId          = gtlPlaylist.identifier;
     youtubePlaylist.title               = gtlPlaylist.snippet.title;
     youtubePlaylist.playlistDescription = gtlPlaylist.snippet.description;
-    youtubePlaylist.hidden = [NSNumber numberWithBool:NO];
+    
+//    youtubePlaylist.hidden = [NSNumber numberWithBool:NO];
+    youtubePlaylist.hidden = [NSNumber numberWithBool:YES];
     
     [[DatabaseManager sharedInstance] saveContext];
     
@@ -141,10 +143,6 @@
         NSData *data = [NSData dataWithContentsOfURL:url];
         [data writeToFile:finalPath atomically:YES];
         
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [data writeToFile:finalPath atomically:YES];
-//        });
-
         dispatch_async(dispatch_get_main_queue(), ^{
             DatabaseManager *db = [DatabaseManager sharedInstance];
             NSError *error = nil;
@@ -158,6 +156,7 @@
     });
 }
 
+
 + (NSString *)fullPathForFile:(NSString *)filename
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -165,5 +164,33 @@
     return [documentsPath stringByAppendingPathComponent:filename];
 }
 
+
+- (void)showOnlyOnePlaylist:(NSString *)playlistId
+{
+    DatabaseManager *db = [DatabaseManager sharedInstance];
+    
+    for (YouTubePlaylist *playlist in db.youtubePlaylistsFetchedController.fetchedObjects) {
+        if ([playlist.playlistId isEqualToString:playlistId]) {
+            playlist.hidden = @NO;
+        } else {
+            playlist.hidden = @YES;
+        }
+        [self _forceToUpdateItems:playlist];
+    }
+    
+    [db saveContext];
+}
+
+
+/* 
+ * It's hard to believe but fetchedResultController doesn't see changes in relations
+ */
+- (void)_forceToUpdateItems:(YouTubePlaylist *)playlist
+{
+    for (NSManagedObject *todo in [playlist valueForKey:@"items"]) {     
+        [todo willChangeValueForKey:@"playlist"];
+        [todo didChangeValueForKey:@"playlist"];
+    }
+}
 
 @end

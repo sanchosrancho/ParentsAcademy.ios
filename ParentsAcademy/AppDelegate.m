@@ -7,12 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "YouTubeLoader.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[YouTubeLoader sharedInstance] loadPlaylistsForChannel:@"UCXfLC9ybl3aIUZpuoA_gRDA"];
     return YES;
 }
 							
