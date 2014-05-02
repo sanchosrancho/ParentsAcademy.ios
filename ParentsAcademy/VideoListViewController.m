@@ -110,12 +110,20 @@
     NSString *cellID = @"VideoCellIdentifier";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     
+    for (UIView *subview in cell.subviews) {
+        [subview removeFromSuperview];
+    }
+    
     YouTubeItem *youtubeVideo = [[DatabaseManager sharedInstance].youtubeItemsFetchedController objectAtIndexPath:indexPath];
     
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"video_thumnail_default"]];
     [imageView setFrame:cell.bounds];
     [imageView setContentMode:UIViewContentModeScaleAspectFit];
     [cell addSubview:imageView];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, cell.frame.size.height - 44, cell.frame.size.width, 44.0f)];
+    titleLabel.text = youtubeVideo.title;
+    [cell addSubview:titleLabel];
 
     if (youtubeVideo.thumbnailCache.length) {
         imageView.image = [UIImage imageWithContentsOfFile: [YouTubeLoader fullPathForFile:youtubeVideo.thumbnailCache] ];
