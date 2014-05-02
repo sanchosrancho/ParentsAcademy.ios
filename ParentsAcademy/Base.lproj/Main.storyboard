@@ -118,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="1822" y="1966"/>
         </scene>
-        <!--View Controller-->
+        <!--Baby Date Birth View Controller-->
         <scene sceneID="qjy-Lz-QHg">
             <objects>
-                <viewController id="dWa-P4-kM7" sceneMemberID="viewController">
+                <viewController id="dWa-P4-kM7" customClass="BabyDateBirthViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zvy-ll-Rzh"/>
                         <viewControllerLayoutGuide type="bottom" id="Wbu-Yk-0Oi"/>
@@ -181,6 +181,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="birthDatePicker" destination="EXH-5d-Rv8" id="0XF-co-iER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6w-pA-d2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

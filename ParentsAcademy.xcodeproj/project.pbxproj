@@ -21,6 +21,7 @@
 		DFB7452C1912C588003806F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB7450E1912C587003806F9 /* UIKit.framework */; };
 		DFB745341912C588003806F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFB745321912C588003806F9 /* InfoPlist.strings */; };
 		DFB745361912C588003806F9 /* ParentsAcademyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB745351912C588003806F9 /* ParentsAcademyTests.m */; };
+		DFB7454619138C96003806F9 /* BabyDateBirthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7454519138C96003806F9 /* BabyDateBirthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		DFB745311912C588003806F9 /* ParentsAcademyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParentsAcademyTests-Info.plist"; sourceTree = "<group>"; };
 		DFB745331912C588003806F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DFB745351912C588003806F9 /* ParentsAcademyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParentsAcademyTests.m; sourceTree = "<group>"; };
+		DFB7454419138C96003806F9 /* BabyDateBirthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyDateBirthViewController.h; sourceTree = "<group>"; };
+		DFB7454519138C96003806F9 /* BabyDateBirthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyDateBirthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,9 @@
 		DFB745101912C587003806F9 /* ParentsAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				DFB7454119138C48003806F9 /* Models */,
+				DFB7454019138C3D003806F9 /* Views */,
+				DFB7453F19138C35003806F9 /* Controllers */,
 				DFB745191912C587003806F9 /* AppDelegate.h */,
 				DFB7451A1912C587003806F9 /* AppDelegate.m */,
 				DFB7451C1912C587003806F9 /* Main.storyboard */,
@@ -150,6 +156,45 @@
 				DFB745321912C588003806F9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFB7453F19138C35003806F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFB7454319138C65003806F9 /* Video */,
+				DFB7454219138C53003806F9 /* Intro */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DFB7454019138C3D003806F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DFB7454119138C48003806F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DFB7454219138C53003806F9 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				DFB7454419138C96003806F9 /* BabyDateBirthViewController.h */,
+				DFB7454519138C96003806F9 /* BabyDateBirthViewController.m */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		DFB7454319138C65003806F9 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFB7454619138C96003806F9 /* BabyDateBirthViewController.m in Sources */,
 				DFB745211912C588003806F9 /* ViewController.m in Sources */,
 				DFB7451B1912C587003806F9 /* AppDelegate.m in Sources */,
 				DFB745171912C587003806F9 /* main.m in Sources */,
@@ -456,6 +502,7 @@
 				DFB7453B1912C588003806F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFB7453C1912C588003806F9 /* Build configuration list for PBXNativeTarget "ParentsAcademyTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +511,7 @@
 				DFB7453E1912C588003806F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
