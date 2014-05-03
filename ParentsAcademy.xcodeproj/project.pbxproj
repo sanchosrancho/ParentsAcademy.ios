@@ -197,6 +197,7 @@
 		DFB7453F19138C35003806F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DFC22B481914A3EA003FD7CB /* CamRecord */,
 				DFB7454319138C65003806F9 /* Video */,
 				DFB7454219138C53003806F9 /* Intro */,
 			);
@@ -247,6 +248,13 @@
 				DFB7454A19138DF4003806F9 /* Settings.m */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		DFC22B481914A3EA003FD7CB /* CamRecord */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CamRecord;
 			sourceTree = "<group>";
 		};
 		DFD37A721913ABD500D1ECE2 /* Video */ = {
