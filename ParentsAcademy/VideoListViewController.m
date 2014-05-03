@@ -11,6 +11,7 @@
 #import "DatabaseManager.h"
 #import "Settings.h"
 #import "VideoPageViewController.h"
+#import "VideoListCell.h"
 
 @interface VideoListViewController () <NSFetchedResultsControllerDelegate> {
     NSArray *tableData;
@@ -43,19 +44,7 @@
 {
     [super viewDidLoad];
     
-//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-//    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
-//    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-//    
-//    [self.collectionView setDataSource:self];
-//    [self.collectionView setDelegate:self];
-//
-//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"VideoCellIdentifier"];
-    [self.collectionView setBackgroundColor:[UIColor clearColor]];
-
-//    [self.view addSubview:self.collectionView];
-    
-//    [[YouTubeLoader sharedInstance] loadPlaylistsForChannel:@"UCXfLC9ybl3aIUZpuoA_gRDA"];
+//    [self.collectionView setBackgroundColor:[UIColor clearColor]];
     [DatabaseManager addListenerForYotubeItemsFetchedResultsController:self];
 }
 
@@ -108,9 +97,8 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath 
 {
-//    NSString *cellID = @"VideoCellIdentifier";
     NSString *cellID = @"VideoCollectionCell";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+    VideoListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     
     for (UIView *subview in cell.subviews) {
         [subview removeFromSuperview];
@@ -118,17 +106,10 @@
     
     YouTubeItem *youtubeVideo = [[DatabaseManager sharedInstance].youtubeItemsFetchedController objectAtIndexPath:indexPath];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"video_thumnail_default"]];
-    [imageView setFrame:cell.bounds];
-    [imageView setContentMode:UIViewContentModeScaleAspectFit];
-    [cell addSubview:imageView];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, cell.frame.size.height - 44, cell.frame.size.width, 44.0f)];
-    titleLabel.text = youtubeVideo.title;
-    [cell addSubview:titleLabel];
+    cell.title = youtubeVideo.title;
 
     if (youtubeVideo.thumbnailCache.length) {
-        imageView.image = [UIImage imageWithContentsOfFile: [YouTubeLoader fullPathForFile:youtubeVideo.thumbnailCache] ];
+        cell.thumbnail = [UIImage imageWithContentsOfFile: [YouTubeLoader fullPathForFile:youtubeVideo.thumbnailCache] ];
     } else {
         [YouTubeLoader downloadThumbnail:youtubeVideo.thumbnailMedium andSaveForItem:youtubeVideo.objectID];
         
@@ -136,7 +117,7 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             NSData *img = [NSData dataWithContentsOfURL:[NSURL URLWithString:thumbnailUrl]];
             dispatch_async(dispatch_get_main_queue(), ^{
-                imageView.image = [UIImage imageWithData:img];
+                cell.thumbnail = [UIImage imageWithData:img];
             });
         });
     }
@@ -146,42 +127,14 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSString *videoId = [[tableData objectAtIndex:indexPath.row] objectForKey:@"video_id"];
     YouTubeItem *youtubeVideo = [[DatabaseManager sharedInstance].youtubeItemsFetchedController objectAtIndexPath:indexPath];
     
-//    UIGraphicsBeginImageContext(CGSizeMake(1,1));
-//    self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:youtubeVideo.videoId];
-//    
-//    [self presentMoviePlayerViewControllerAnimated:self.videoPlayerViewController];
-//    [self.videoPlayerViewController.moviePlayer play];
-//
-//    UIGraphicsEndImageContext();
-
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     VideoPageViewController *videoPage = [storyboard instantiateViewControllerWithIdentifier:@"VideoPageViewController"];
     videoPage.videoItem = youtubeVideo;
     
     [self.navigationController pushViewController:videoPage animated:YES];
 }
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout  *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(192.f, 192.f);
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 10.0;
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 10.0;
-}
-
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(0, 10, 0, 10);  // top, left, bottom, right
-}
-
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {

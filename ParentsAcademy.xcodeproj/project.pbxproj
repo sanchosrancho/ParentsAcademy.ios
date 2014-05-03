@@ -28,6 +28,7 @@
 		DFC22B4D1914A49C003FD7CB /* CamRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC22B4C1914A49C003FD7CB /* CamRecorderViewController.m */; };
 		DFC22B4F1914A4E0003FD7CB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC22B4E1914A4E0003FD7CB /* CoreMedia.framework */; };
 		DFC22B511914A508003FD7CB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC22B501914A508003FD7CB /* AVFoundation.framework */; };
+		DFC22B541914D98C003FD7CB /* VideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC22B531914D98C003FD7CB /* VideoListCell.m */; };
 		DFD37A711913A94D00D1ECE2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DFD37A701913A94D00D1ECE2 /* README.md */; };
 		DFD37A751913ABF900D1ECE2 /* YouTubeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A741913ABF900D1ECE2 /* YouTubeLoader.m */; };
 		DFD37A781913AE2000D1ECE2 /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A771913AE2000D1ECE2 /* VideoListViewController.m */; };
@@ -80,6 +81,8 @@
 		DFC22B4C1914A49C003FD7CB /* CamRecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamRecorderViewController.m; sourceTree = "<group>"; };
 		DFC22B4E1914A4E0003FD7CB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		DFC22B501914A508003FD7CB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DFC22B521914D98C003FD7CB /* VideoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListCell.h; sourceTree = "<group>"; };
+		DFC22B531914D98C003FD7CB /* VideoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListCell.m; sourceTree = "<group>"; };
 		DFD37A701913A94D00D1ECE2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DFD37A731913ABF900D1ECE2 /* YouTubeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeLoader.h; sourceTree = "<group>"; };
 		DFD37A741913ABF900D1ECE2 /* YouTubeLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeLoader.m; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 		DFB7454019138C3D003806F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DFC22B521914D98C003FD7CB /* VideoListCell.h */,
+				DFC22B531914D98C003FD7CB /* VideoListCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -444,6 +449,7 @@
 				DFD37A8D191451D500D1ECE2 /* VideoPageViewController.m in Sources */,
 				DFD37A751913ABF900D1ECE2 /* YouTubeLoader.m in Sources */,
 				DFD37A881913BACE00D1ECE2 /* DatabaseManager.m in Sources */,
+				DFC22B541914D98C003FD7CB /* VideoListCell.m in Sources */,
 				DFD37A841913B96900D1ECE2 /* YouTubeItem.m in Sources */,
 				DFB745171912C587003806F9 /* main.m in Sources */,
 			);
