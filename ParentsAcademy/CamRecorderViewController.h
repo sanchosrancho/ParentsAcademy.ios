@@ -26,6 +26,7 @@
 - (void)cameraSetOutputProperties;
 - (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position;
 
+@property (weak, nonatomic) IBOutlet UIView *camTopPanel;
 @property (weak, nonatomic) IBOutlet UIButton *switchCameraButton;
 
 - (IBAction)recordButtonTouched:(id)sender;

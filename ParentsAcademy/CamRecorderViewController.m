@@ -135,7 +135,7 @@
 	[self.view sendSubviewToBack:cameraView];
 	
 	[cameraView.layer addSublayer:self.videoPreviewLayer];
-    [cameraView.layer addSublayer:self.recordFlashingLayer];
+    [self.camTopPanel.layer addSublayer:self.recordFlashingLayer];
     
 	[captureSession startRunning];
 }
@@ -297,9 +297,9 @@ didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL
     if (_recordFlashingLayer) return _recordFlashingLayer;
     
     _recordFlashingLayer = [CALayer layer];
-    _recordFlashingLayer.backgroundColor = [UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:1.0].CGColor;
+    _recordFlashingLayer.backgroundColor = [UIColor redColor].CGColor; //[UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:1.0].CGColor;
 //    _recordFlashingLayer.frame = CGRectMake(self.view.frame.size.width - 16 - 24, 60 + 16, 24, 24);
-    _recordFlashingLayer.frame = CGRectMake(16, 64 + 10, 24, 24);
+    _recordFlashingLayer.frame = CGRectMake(16, 10, 24, 24);
     _recordFlashingLayer.cornerRadius = 12;
     _recordFlashingLayer.opacity = 0;
     return _recordFlashingLayer;
