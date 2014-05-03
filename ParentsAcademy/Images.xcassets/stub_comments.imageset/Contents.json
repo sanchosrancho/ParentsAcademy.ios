@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "video_thumnail_default.png"
+      "filename" : "stub_comments.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "stub_comments@2x.png"
     }
   ],
   "info" : {

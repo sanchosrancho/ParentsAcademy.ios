@@ -321,6 +321,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Alex Shevlyakov";
 				TargetAttributes = {
+					DFB745061912C587003806F9 = {
+						DevelopmentTeam = 8GYP7QP7V3;
+					};
 					DFB745271912C588003806F9 = {
 						TestTargetID = DFB745061912C587003806F9;
 					};
@@ -542,9 +545,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParentsAcademy/ParentsAcademy-Prefix.pch";
 				INFOPLIST_FILE = "ParentsAcademy/ParentsAcademy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -556,9 +561,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParentsAcademy/ParentsAcademy-Prefix.pch";
 				INFOPLIST_FILE = "ParentsAcademy/ParentsAcademy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
