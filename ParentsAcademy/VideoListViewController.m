@@ -100,10 +100,6 @@
     NSString *cellID = @"VideoCollectionCell";
     VideoListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     
-    for (UIView *subview in cell.subviews) {
-        [subview removeFromSuperview];
-    }
-    
     YouTubeItem *youtubeVideo = [[DatabaseManager sharedInstance].youtubeItemsFetchedController objectAtIndexPath:indexPath];
     
     cell.title = youtubeVideo.title;
