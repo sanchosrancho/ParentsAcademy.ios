@@ -19,18 +19,6 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        self.layer.shadowColor = [[UIColor redColor] CGColor];
-        self.layer.shadowOffset = CGSizeMake(5.0, 15.0);
-        self.layer.shadowOpacity = 1.0;
-        self.layer.shadowRadius = 0.0;
-    }
-    return self;
-}
-
 - (void)setTitle:(NSString *)title
 {
     _title = title;

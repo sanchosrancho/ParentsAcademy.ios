@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.contentScrollView.backgroundColor = [UIColor greenColor];
+//    self.contentScrollView.backgroundColor = [UIColor greenColor];
 }
 
 - (void)didReceiveMemoryWarning
