@@ -42,6 +42,12 @@
     [self drawLayout];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.videoPlayerViewController.moviePlayer stop];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -64,24 +70,28 @@
     
     self.navigationItem.title = self.videoItem.title;
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"video_thumnail_default"]];
-    [imageView setFrame:self.videoContainerView.bounds];
-    [imageView setContentMode:UIViewContentModeScaleAspectFit];
-    [self.videoContainerView addSubview:imageView];
+    self.videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:self.videoItem.videoId];
+    [self.videoPlayerViewController presentInView:self.videoContainerView];
+    [self.videoPlayerViewController.moviePlayer play];
     
-    if (self.videoItem.thumbnailCache.length) {
-        imageView.image = [UIImage imageWithContentsOfFile: [YouTubeLoader fullPathForFile:self.videoItem.thumbnailCache] ];
-    } else {
-        [YouTubeLoader downloadThumbnail:self.videoItem.thumbnailMedium andSaveForItem:self.videoItem.objectID];
-        
-        NSString *thumbnailUrl = self.videoItem.thumbnailMedium;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            NSData *img = [NSData dataWithContentsOfURL:[NSURL URLWithString:thumbnailUrl]];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                imageView.image = [UIImage imageWithData:img];
-            });
-        });
-    }
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"video_thumnail_default"]];
+//    [imageView setFrame:self.videoContainerView.bounds];
+//    [imageView setContentMode:UIViewContentModeScaleAspectFit];
+//    [self.videoContainerView addSubview:imageView];
+//    
+//    if (self.videoItem.thumbnailCache.length) {
+//        imageView.image = [UIImage imageWithContentsOfFile: [YouTubeLoader fullPathForFile:self.videoItem.thumbnailCache] ];
+//    } else {
+//        [YouTubeLoader downloadThumbnail:self.videoItem.thumbnailMedium andSaveForItem:self.videoItem.objectID];
+//        
+//        NSString *thumbnailUrl = self.videoItem.thumbnailMedium;
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//            NSData *img = [NSData dataWithContentsOfURL:[NSURL URLWithString:thumbnailUrl]];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                imageView.image = [UIImage imageWithData:img];
+//            });
+//        });
+//    }
     
     
 }
