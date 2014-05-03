@@ -198,17 +198,51 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm7-GV-ZC8">
-                                <rect key="frame" x="137" y="396" width="64" height="64"/>
+                            <view alpha="0.29999999999999966" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfL-f4-PAO">
+                                <rect key="frame" x="0.0" y="376" width="320" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm7-GV-ZC8">
+                                <rect key="frame" x="128" y="396" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="icon_camera_record">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="recordButtonTouched:" destination="TUp-Zp-DTd" eventType="touchDown" id="rN9-88-ewN"/>
+                                </connections>
                             </button>
+                            <view alpha="0.29999999999999966" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJD-Yw-kGV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjI-rJ-39F">
+                                        <rect key="frame" x="274" y="6" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="s" image="icon_switch_camera"/>
+                                        <connections>
+                                            <action selector="switchCameraButtonTouched:" destination="TUp-Zp-DTd" eventType="touchDown" id="9jd-L2-hj6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RPe-Bc-qKS" firstAttribute="top" secondItem="Fm7-GV-ZC8" secondAttribute="bottom" constant="20" id="8aE-PS-tYv"/>
+                            <constraint firstAttribute="centerX" secondItem="Fm7-GV-ZC8" secondAttribute="centerX" id="CXK-Vn-TUK"/>
+                            <constraint firstAttribute="centerX" secondItem="Fm7-GV-ZC8" secondAttribute="centerX" id="LQJ-VG-MHN"/>
+                            <constraint firstItem="kfL-f4-PAO" firstAttribute="leading" secondItem="YUB-vY-AQb" secondAttribute="leading" id="Nmb-Cz-Uoz"/>
+                            <constraint firstAttribute="trailing" secondItem="kfL-f4-PAO" secondAttribute="trailing" id="cqe-sj-Tou"/>
+                            <constraint firstItem="RPe-Bc-qKS" firstAttribute="top" secondItem="kfL-f4-PAO" secondAttribute="bottom" id="nUB-yd-TNc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Запись вопроса специалисту" id="h3a-ZF-Gvz"/>
+                    <connections>
+                        <outlet property="switchCameraButton" destination="fjI-rJ-39F" id="NJm-Ot-Zvt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yD6-9U-Q7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,6 +315,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="icon_camera_record" width="64" height="64"/>
+        <image name="icon_switch_camera" width="64" height="64"/>
         <image name="stub_comments" width="320" height="932"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -171,6 +171,18 @@
 	return nil;
 }
 
+- (IBAction)recordButtonTouched:(id)sender {
+    if (!isRecording) {
+        [self startRecording];
+    } else {
+        [self stopRecording];
+    }
+}
+
+- (IBAction)switchCameraButtonTouched:(id)sender {
+    [self toggleCameraPosition];
+}
+
 - (void)toggleCameraPosition
 {
 	if ([[AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo] count] > 1) {
@@ -206,6 +218,7 @@
 - (void)startRecording
 {
     isRecording = YES;
+    self.switchCameraButton.hidden = YES;
     [self recordIconFlashing_start];
 
     NSString *outputPath = [[NSString alloc] initWithFormat:@"%@%@%4.f%@", NSTemporaryDirectory(), @"camera-video-", [NSDate timeIntervalSinceReferenceDate], @".mov"];
@@ -224,6 +237,7 @@
 - (void)stopRecording
 {
     isRecording = NO;
+    self.switchCameraButton.hidden = NO;
     [self recordIconFlashing_stop];
     [movieFileOutput stopRecording];
 }
@@ -283,8 +297,9 @@ didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL
     if (_recordFlashingLayer) return _recordFlashingLayer;
     
     _recordFlashingLayer = [CALayer layer];
-    _recordFlashingLayer.backgroundColor = [UIColor colorWithRed:0.9 green:0.3 blue:0.3 alpha:0.9].CGColor;
-    _recordFlashingLayer.frame = CGRectMake(self.view.frame.size.width - 16 - 24, 16, 24, 24);
+    _recordFlashingLayer.backgroundColor = [UIColor colorWithRed:1.0 green:0.1 blue:0.1 alpha:1.0].CGColor;
+//    _recordFlashingLayer.frame = CGRectMake(self.view.frame.size.width - 16 - 24, 60 + 16, 24, 24);
+    _recordFlashingLayer.frame = CGRectMake(16, 64 + 10, 24, 24);
     _recordFlashingLayer.cornerRadius = 12;
     _recordFlashingLayer.opacity = 0;
     return _recordFlashingLayer;
