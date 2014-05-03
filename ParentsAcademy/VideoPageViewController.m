@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.contentScrollView.backgroundColor = [UIColor greenColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,27 +76,13 @@
     [self.videoPlayerViewController presentInView:self.videoContainerView];
     [self.videoPlayerViewController.moviePlayer play];
     
-//    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"video_thumnail_default"]];
-//    [imageView setFrame:self.videoContainerView.bounds];
-//    [imageView setContentMode:UIViewContentModeScaleAspectFit];
-//    [self.videoContainerView addSubview:imageView];
-//    
-//    if (self.videoItem.thumbnailCache.length) {
-//        imageView.image = [UIImage imageWithContentsOfFile: [YouTubeLoader fullPathForFile:self.videoItem.thumbnailCache] ];
-//    } else {
-//        [YouTubeLoader downloadThumbnail:self.videoItem.thumbnailMedium andSaveForItem:self.videoItem.objectID];
-//        
-//        NSString *thumbnailUrl = self.videoItem.thumbnailMedium;
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-//            NSData *img = [NSData dataWithContentsOfURL:[NSURL URLWithString:thumbnailUrl]];
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                imageView.image = [UIImage imageWithData:img];
-//            });
-//        });
+    // expand scroll view content area
+//    CGRect contentRect = CGRectZero;
+//    for (UIView *view in self.contentScrollView.subviews) {
+//        contentRect = CGRectUnion(contentRect, view.frame);
 //    }
-    
-    
-    
+//    self.contentScrollView.contentSize = contentRect.size;
+
 }
 
 @end

@@ -43,17 +43,17 @@
 {
     [super viewDidLoad];
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
-    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    
-    [self.collectionView setDataSource:self];
-    [self.collectionView setDelegate:self];
-
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"VideoCellIdentifier"];
+//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+//    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+//    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+//    
+//    [self.collectionView setDataSource:self];
+//    [self.collectionView setDelegate:self];
+//
+//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"VideoCellIdentifier"];
     [self.collectionView setBackgroundColor:[UIColor clearColor]];
 
-    [self.view addSubview:self.collectionView];
+//    [self.view addSubview:self.collectionView];
     
 //    [[YouTubeLoader sharedInstance] loadPlaylistsForChannel:@"UCXfLC9ybl3aIUZpuoA_gRDA"];
     [DatabaseManager addListenerForYotubeItemsFetchedResultsController:self];
@@ -108,7 +108,8 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath 
 {
-    NSString *cellID = @"VideoCellIdentifier";
+//    NSString *cellID = @"VideoCellIdentifier";
+    NSString *cellID = @"VideoCollectionCell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     
     for (UIView *subview in cell.subviews) {
