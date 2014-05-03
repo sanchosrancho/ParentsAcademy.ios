@@ -24,6 +24,10 @@
 		DFB745361912C588003806F9 /* ParentsAcademyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB745351912C588003806F9 /* ParentsAcademyTests.m */; };
 		DFB7454619138C96003806F9 /* BabyDateBirthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7454519138C96003806F9 /* BabyDateBirthViewController.m */; };
 		DFB7454B19138DF4003806F9 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB7454A19138DF4003806F9 /* Settings.m */; };
+		DFC22B4A1914A471003FD7CB /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC22B491914A471003FD7CB /* AssetsLibrary.framework */; };
+		DFC22B4D1914A49C003FD7CB /* CamRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC22B4C1914A49C003FD7CB /* CamRecorderViewController.m */; };
+		DFC22B4F1914A4E0003FD7CB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC22B4E1914A4E0003FD7CB /* CoreMedia.framework */; };
+		DFC22B511914A508003FD7CB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC22B501914A508003FD7CB /* AVFoundation.framework */; };
 		DFD37A711913A94D00D1ECE2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DFD37A701913A94D00D1ECE2 /* README.md */; };
 		DFD37A751913ABF900D1ECE2 /* YouTubeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A741913ABF900D1ECE2 /* YouTubeLoader.m */; };
 		DFD37A781913AE2000D1ECE2 /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD37A771913AE2000D1ECE2 /* VideoListViewController.m */; };
@@ -71,6 +75,11 @@
 		DFB7454519138C96003806F9 /* BabyDateBirthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyDateBirthViewController.m; sourceTree = "<group>"; };
 		DFB7454919138DF4003806F9 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		DFB7454A19138DF4003806F9 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		DFC22B491914A471003FD7CB /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		DFC22B4B1914A49C003FD7CB /* CamRecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamRecorderViewController.h; sourceTree = "<group>"; };
+		DFC22B4C1914A49C003FD7CB /* CamRecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamRecorderViewController.m; sourceTree = "<group>"; };
+		DFC22B4E1914A4E0003FD7CB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		DFC22B501914A508003FD7CB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DFD37A701913A94D00D1ECE2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DFD37A731913ABF900D1ECE2 /* YouTubeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeLoader.h; sourceTree = "<group>"; };
 		DFD37A741913ABF900D1ECE2 /* YouTubeLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeLoader.m; sourceTree = "<group>"; };
@@ -93,6 +102,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC22B511914A508003FD7CB /* AVFoundation.framework in Frameworks */,
+				DFC22B4F1914A4E0003FD7CB /* CoreMedia.framework in Frameworks */,
+				DFC22B4A1914A471003FD7CB /* AssetsLibrary.framework in Frameworks */,
 				DFD37A8A1913CCDE00D1ECE2 /* MediaPlayer.framework in Frameworks */,
 				DFB7450D1912C587003806F9 /* CoreGraphics.framework in Frameworks */,
 				DFB7450F1912C587003806F9 /* UIKit.framework in Frameworks */,
@@ -138,6 +150,9 @@
 		DFB745091912C587003806F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFC22B501914A508003FD7CB /* AVFoundation.framework */,
+				DFC22B4E1914A4E0003FD7CB /* CoreMedia.framework */,
+				DFC22B491914A471003FD7CB /* AssetsLibrary.framework */,
 				DFD37A891913CCDE00D1ECE2 /* MediaPlayer.framework */,
 				DFB7450A1912C587003806F9 /* Foundation.framework */,
 				DFB7450C1912C587003806F9 /* CoreGraphics.framework */,
@@ -253,6 +268,8 @@
 		DFC22B481914A3EA003FD7CB /* CamRecord */ = {
 			isa = PBXGroup;
 			children = (
+				DFC22B4B1914A49C003FD7CB /* CamRecorderViewController.h */,
+				DFC22B4C1914A49C003FD7CB /* CamRecorderViewController.m */,
 			);
 			name = CamRecord;
 			sourceTree = "<group>";
@@ -423,6 +440,7 @@
 				DFD37A7E1913B16C00D1ECE2 /* Model.xcdatamodeld in Sources */,
 				DFD37A781913AE2000D1ECE2 /* VideoListViewController.m in Sources */,
 				DFB7451B1912C587003806F9 /* AppDelegate.m in Sources */,
+				DFC22B4D1914A49C003FD7CB /* CamRecorderViewController.m in Sources */,
 				DFD37A8D191451D500D1ECE2 /* VideoPageViewController.m in Sources */,
 				DFD37A751913ABF900D1ECE2 /* YouTubeLoader.m in Sources */,
 				DFD37A881913BACE00D1ECE2 /* DatabaseManager.m in Sources */,

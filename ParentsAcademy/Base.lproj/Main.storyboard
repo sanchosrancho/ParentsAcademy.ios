@@ -186,10 +186,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="725" y="1020"/>
         </scene>
-        <!--View Controller - Запись вопроса специалисту-->
+        <!--Cam Recorder View Controller - Запись вопроса специалисту-->
         <scene sceneID="qLf-YT-CbE">
             <objects>
-                <viewController id="TUp-Zp-DTd" sceneMemberID="viewController">
+                <viewController id="TUp-Zp-DTd" customClass="CamRecorderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F5J-M5-J0x"/>
                         <viewControllerLayoutGuide type="bottom" id="RPe-Bc-qKS"/>
@@ -197,6 +197,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <view key="view" contentMode="scaleToFill" id="YUB-vY-AQb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm7-GV-ZC8">
+                                <rect key="frame" x="137" y="396" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icon_camera_record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Запись вопроса специалисту" id="h3a-ZF-Gvz"/>
@@ -271,6 +280,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
+        <image name="icon_camera_record" width="64" height="64"/>
         <image name="stub_comments" width="320" height="932"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
